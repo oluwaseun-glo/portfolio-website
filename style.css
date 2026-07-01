@@ -1,0 +1,350 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+}
+
+body{
+    background:linear-gradient(to right, #4C1D95, #7C3AED, #C4B5FD);
+    color: white;
+    line-height: 1.7;
+    padding-top: 70px;
+}
+
+section{
+    padding: 80px 20px;
+}
+
+.section-container, .section-content{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h2{
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(44, 5, 171);
+    text-decoration: none;
+    transition: all 0.2s ease ;
+}
+
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #3B0764;
+    border-bottom: 1px solid black;
+    z-index: 1000;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 15px 20px;
+
+}
+
+.logo{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #FBBF24;
+}
+
+.nav-links{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a{
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: white;
+
+} 
+.nav-links a:hover{
+     color: #FBBF24;
+}
+
+.menu-btn{
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+}
+
+.menu-btn span{
+    width: 24px;
+    height: 2.5px;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.3s ease ;
+}
+
+.hero{
+    /* background:linear-gradient( to right, rgb(123, 1, 123),rgb(255, 0, 217)); */
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 50px;
+
+}
+
+.hero-text h1{
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: white;
+    line-height: 1.15;
+}
+
+.hero-text h2{
+    font-size: 1.8rem;
+    color: #E9D5FF;
+    margin: 10px 0 20px 0;
+    font-weight: 500;
+}
+
+.hero-text p{
+    font-size: 1.1rem;
+    color: #DDD6FE;
+    max-width: 550px;
+    margin-bottom: 35px;
+}
+
+.hero-buttons{
+    display: flex;
+    gap: 15px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.btn-primary{
+   background: #FBBF24;
+    color: #1F2937;
+}
+
+.btn-primary:hover{
+     background: #F59E0B;
+}
+
+.btn-secondary{
+    background: transparent;
+    border: 2px solid white;
+    color:white;
+}
+.btn-secondary:hover{
+    background-color: white;
+        color:#4C1D95;
+
+}
+.hero-image img{
+    max-width: 280px;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #FBBF24;
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+}
+
+.hero-image img[src=""], .hero-image img:not([src]){
+    display: none;
+}
+
+
+.about-content p{
+    max-width: 750px;
+    font-size: 1.05rem;
+    color: #F3F4F6;
+}
+
+
+
+.skills-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill-tag{
+    background-color: #6D28D9;
+    border: 1px solid black;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+
+
+.project-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.project-card{
+    background-color: white;
+    color: #1F2937;
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card:hover{
+    transform: translate(-6px);
+    box-shadow: 0 4px 20px rgba(0,0,0 ,0.04);
+
+}
+
+.project-card h3{
+    font-size:1.25rem;
+    color: #1F2937;
+    margin: 12px;
+
+}
+
+.project-card p{
+    color: #1F2937;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.project-link, .project-links{
+    display: flex;
+    gap: 20px;
+}
+
+.proj-link{
+    font-size: 0.9rem;
+    color: #1F2937;
+    font-weight: 600;
+}
+
+.proj-link:hover{
+    color: #1F2937;
+    text-decoration: underline;
+}
+
+.contact {
+   
+    text-align: center;
+}
+
+.contact p {
+    color: white;
+    margin-bottom: 30px;
+    font-size: 1.05rem;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-links a:not(.btn) {
+    font-weight: 600;
+    color: white;
+}
+
+.contact-links a:not(.btn):hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.footer {
+    text-align: center;
+    padding: 35px 20px;
+   
+    border-top: 1px solid #374151;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   7. RESPONSIVE DESIGN (Media Queries)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .menu-btn {
+        display: flex; /* Show Hamburger Icon */
+    }
+
+    .nav-links {
+        display: none; /* Hide standard nav list links layout */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #374151;
+        flex-direction: column;
+        padding: 25px 0;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+        border-bottom: 1px solid black;
+        gap: 20px;
+        text-align: center;
+    }
+
+    /* JavaScript will toggle this class class definition */
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-text p {
+        margin: 0 auto 30px auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
