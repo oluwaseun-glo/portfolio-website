@@ -6,6 +6,10 @@
 
 }
 
+html{
+    scroll-behaviour: smooth;
+}
+
 body{
     background:linear-gradient(to right, #4C1D95, #7C3AED, #C4B5FD);
     color: white;
@@ -13,6 +17,28 @@ body{
     padding-top: 70px;
 }
 
+/* 🔮 background overlay */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
+
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+    z-index: 900;
+}
+
+/* show overlay */
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
 section{
     padding: 80px 20px;
 }
@@ -64,11 +90,16 @@ a{
 }
 
 .nav-links{
-    display: flex;
+    display: none;
     gap: 30px;
     list-style: none;
+    z-index: 1000;
 }
 
+.nav-links.active{
+    display: flex;
+    flex-direction: column;
+}
 .nav-links a{
     font-weight: 500;
     font-size: 0.95rem;
@@ -302,9 +333,7 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;
     font-size: 0.9rem;
 }
 
-/* ==========================================================================
-   7. RESPONSIVE DESIGN (Media Queries)
-   ========================================================================== */
+
 @media (max-width: 768px) {
     .menu-btn {
         display: flex; /* Show Hamburger Icon */
@@ -313,23 +342,42 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;
     .nav-links {
         display: none; /* Hide standard nav list links layout */
         position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #374151;
+        top: 70%;
+        right: 20px;
+        width: 200px;
+        background: rgba(59, 7, 100, 0.6);
         flex-direction: column;
         padding: 25px 0;
         box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
         border-bottom: 1px solid black;
         gap: 20px;
         text-align: center;
+         max-height: 0;
+        opacity: 0; 
+        overflow: hidden;
+
+        transform: translateY(-20px);
+        transition: all 0.3s ease;
+
+        z-index: 1001; /* Ensure it appears above other content */
     }
 
     /* JavaScript will toggle this class class definition */
     .nav-links.active {
+        max-height: 300px; /* Adjust as needed */
         display: flex;
+        opacity: 1;
+        flex-direction: column;
     }
 
+
+    .nav-links li{
+        width: 100%;
+    }
+
+    .nav-links a{
+        width: 100%;
+    }
     .hero-container {
         flex-direction: column-reverse;
         text-align: center;
