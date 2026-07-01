@@ -214,9 +214,10 @@ a{
 }
 
 .project-card{
-    background-color: white;
-    color: #1F2937;
-    border: 1px solid black;
+   background-color: #6D28D9;
+    color: white;
+     border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     padding: 30px;
     border-radius: 8px;
     display: flex;
@@ -225,20 +226,24 @@ a{
 }
 
 .project-card:hover{
-    transform: translate(-6px);
-    box-shadow: 0 4px 20px rgba(0,0,0 ,0.04);
-
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card h3{
     font-size:1.25rem;
-    color: #1F2937;
+   
     margin: 12px;
 
 }
-
+.project-card h3,
+.project-card p,
+.proj-link {
+    color: white;
+}
 .project-card p{
-    color: #1F2937;
+    
     font-size: 0.95rem;
     margin-bottom: 25px;
     flex-grow: 1;
@@ -251,7 +256,7 @@ a{
 
 .proj-link{
     font-size: 0.9rem;
-    color: #1F2937;
+    color: #E9D5FF;
     font-weight: 600;
 }
 
